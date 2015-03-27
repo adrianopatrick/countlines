@@ -1,0 +1,1 @@
+Projeto java que conta as linhas de código-fonte de um projeto, deve ser informado a extensão dos arquivos que se deseja contar e o path do projeto
