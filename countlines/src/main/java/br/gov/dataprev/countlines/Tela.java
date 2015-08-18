@@ -4,6 +4,7 @@
 package br.gov.dataprev.countlines;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -16,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
 /**
@@ -48,6 +50,7 @@ public class Tela extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 					Tela frame = new Tela();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -70,7 +73,9 @@ public class Tela extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lbGit = new JLabel("https://github.com/adrianopatrick/countlines.git");
-		lbGit.setBounds(10, 29, 147, 14);
+		lbGit.setBounds(10, 6, 217, 14);
+		lbGit.setFont(new Font("Dialog", Font.PLAIN, 9)); 
+		contentPane.add(lbGit);
 		
 		JLabel lblDiretrioDoProjeto = new JLabel("Diretório do Projeto:");
 		lblDiretrioDoProjeto.setBounds(10, 29, 147, 14);
