@@ -69,6 +69,9 @@ public class Tela extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		JLabel lbGit = new JLabel("https://github.com/adrianopatrick/countlines.git");
+		lbGit.setBounds(10, 29, 147, 14);
+		
 		JLabel lblDiretrioDoProjeto = new JLabel("Diretório do Projeto:");
 		lblDiretrioDoProjeto.setBounds(10, 29, 147, 14);
 		contentPane.add(lblDiretrioDoProjeto);
