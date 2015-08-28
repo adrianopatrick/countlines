@@ -3,12 +3,15 @@
  */
 package br.gov.dataprev.countlines;
 
+import java.awt.Event;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.io.File;
 
+import javax.swing.InputMap;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
@@ -17,6 +20,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
@@ -83,6 +87,9 @@ public class Tela extends JFrame {
 
 		textField = new JTextField();
 		textField.setBounds(140, 26, 259, 20);
+		@SuppressWarnings("static-access")
+		InputMap map2 = textField.getInputMap(textField.WHEN_FOCUSED);
+	    map2.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
 		contentPane.add(textField);
 		textField.setColumns(10);
 
@@ -192,7 +199,7 @@ public class Tela extends JFrame {
 		panel_1.add(chckbxjs);
 
 		JCheckBox chckbxcss = new JCheckBox(SUFIXO_CSS);
-		chckbxjs.addActionListener(new ActionListener() {
+		chckbxcss.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				checked(chckbxcss, SUFIXO_CSS);
 			}
